@@ -8,7 +8,7 @@ services:
         - BLOCKCHAIN_DATA_PATH=${DATA_PATH}/${KV1_NAME}
         - P2P_PORT=${KV1_SMARTCHAIN_NODE_P2P_PORT}
         - RPC_PORT=${KV1_SMARTCHAIN_NODE_RPC_PORT}
-    image: stagingjuice-komodo-node:test
+    image: imylomylo/openfood-komodo-node:v0.1
     environment:
       - AC_CC=2
       - AC_PUBKEY=038afbc819aecfb3d65acdf270f755c9279d69d4a27293f10889264b8bd6c1fae2
@@ -71,7 +71,7 @@ services:
         - BLOCKCHAIN_DATA_PATH=${DATA_PATH}/${AC_NAME}
         - P2P_PORT=${KOMODO_SMARTCHAIN_NODE_P2P_PORT}
         - RPC_PORT=${KOMODO_SMARTCHAIN_NODE_RPC_PORT}
-    image: stagingjuice-komodo-node:test
+    image: imylomylo/openfood-komodo-node:v0.1
     environment:
       - AC_CC=2
       - AC_PUBKEY=038afbc819aecfb3d65acdf270f755c9279d69d4a27293f10889264b8bd6c1fae2
