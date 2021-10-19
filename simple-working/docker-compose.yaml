@@ -2,12 +2,6 @@ version: "3.7"
 
 services:
   kv1stagingjuice-komodo-node:
-    build:
-      context: ./stagingjuice-komodo-node
-      args:
-        - BLOCKCHAIN_DATA_PATH=${DATA_PATH}/${KV1_NAME}
-        - P2P_PORT=${KV1_SMARTCHAIN_NODE_P2P_PORT}
-        - RPC_PORT=${KV1_SMARTCHAIN_NODE_RPC_PORT}
     image: imylomylo/openfood-komodo-node:v0.1
     environment:
       - AC_CC=2
@@ -65,12 +59,6 @@ services:
       - ./kv1stagingjuice-komodo-node/data:${DATA_PATH}/${KV1_NAME}
       - ./customer-smartchain-nodes-blocknotify:/opt/komodo/customer-smartchain-nodes-blocknotify
   stagingjuice-komodo-node:
-    build:
-      context: ./stagingjuice-komodo-node
-      args:
-        - BLOCKCHAIN_DATA_PATH=${DATA_PATH}/${AC_NAME}
-        - P2P_PORT=${KOMODO_SMARTCHAIN_NODE_P2P_PORT}
-        - RPC_PORT=${KOMODO_SMARTCHAIN_NODE_RPC_PORT}
     image: imylomylo/openfood-komodo-node:v0.1
     environment:
       - AC_CC=2
